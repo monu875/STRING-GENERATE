@@ -43,7 +43,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         )
     elif query == "generate":
         await callback_query.message.reply(
-            "Please choose the python library you want to generate string session for",
+            "Please choose the python library you want to generate string session for\n\n",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
