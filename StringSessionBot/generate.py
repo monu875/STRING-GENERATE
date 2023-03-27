@@ -60,9 +60,8 @@ async def generate_session(bot:Client msg:Message, telethon=False, old_pyro: boo
         if not old_pyro:
             ty += " ᴠ2"
     await msg.reply(
-        "Starting {ty} Session Generation..."
+        f"Starting {ty} Session Generation..."
         )
-    )
     user_id = msg.chat.id
     api_id_msg = await bot.ask(
         user_id, "Please send your `API_ID`\n\nClick /skip for generate `APP_ID` & `API_HASH`.", filters=filters.text
