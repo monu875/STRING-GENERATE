@@ -1,3 +1,4 @@
+from pyrogram.types import Message
 from Data import Data
 from pyrogram import Client, filters
 from pyrogram1 import Client as Client1
