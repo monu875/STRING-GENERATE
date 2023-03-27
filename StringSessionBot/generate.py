@@ -52,7 +52,7 @@ async def main(_, msg):
         reply_markup=InlineKeyboardMarkup(gen_buttons))
 
 
-async def generate_session(bot:Client msg:Message, telethon=False, old_pyro: bool = False):
+async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: bool = False):
     if telethon:
         ty = "Telethon"
     else:
