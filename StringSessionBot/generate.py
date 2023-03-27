@@ -70,8 +70,8 @@ async def generate_session(bot:Client msg:Message, telethon=False, old_pyro: boo
     if await cancelled(api_id_msg):
         return
     if api_id_msg.text == "/skip":
-        api_id = 
-        api_hash = 
+        api_id = Config.APP_ID
+        api_hash = Config.API_HASH
     else:
         try:
             api_id = int(api_id_msg.text
