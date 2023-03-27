@@ -37,7 +37,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="**Help related on how to use me...**\n" + Data.HELP,
+            text="🧑‍💻**Help related on how to use me...**\n" + Data.HELP,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
@@ -47,11 +47,11 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Pyrogram V1", callback_data="pyrogram1"),
-                        InlineKeyboardButton("Pyrogram V2", callback_data="pyrogram"),
+                        InlineKeyboardButton("✨Pyrogram V1✨", callback_data="pyrogram1"),
+                        InlineKeyboardButton("⚜️Pyrogram V2⚜️", callback_data="pyrogram"),
                     ],
                     [
-                        InlineKeyboardButton("Telethon", callback_data="telethon"),
+                        InlineKeyboardButton("⚡Telethon⚡", callback_data="telethon"),
                     ],
                 ]
             ),
