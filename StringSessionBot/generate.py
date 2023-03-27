@@ -23,7 +23,7 @@ from pyrogram1.errors import (
 
 from Config import Config
 
-ERROR_MESSAGE = f"{}\n\nSomething Error in Session Generator Bot\nReport it To @LegendBot_Owner\n       ©@LegendBot_OP"
+ERROR_MESSAGE = "{}\n\nSomething Error in Session Generator Bot\nReport it To @LegendBot_Owner\n       ©@LegendBot_OP"
 
 
 gen_buttons = [
