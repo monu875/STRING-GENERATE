@@ -9,7 +9,6 @@ from pyrogram.types import (
 @Client.on_callback_query()
 async def _callbacks(bot: Client, callback_query: CallbackQuery):
     user = await bot.get_me()
-    # user_id = callback_query.from_user.id
     mention = user["mention"]
     query = callback_query.data.lower()
     if query.startswith("home"):
@@ -58,8 +57,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await callback_query.answer()
         try:
             if query == "pyrogram":
+                await callback_query.answer()
                 await generate_session(bot, callback_query.message)
-            else:
+            elif query == "pyrogram1":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message, old_pyro=True)
+            elif query == "telethon":
+                await callback_query.answer()
                 await generate_session(bot, callback_query.message, telethon=True)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
