@@ -4,48 +4,48 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-Hey {}
+👋 Hello {} Sir,
 
-Welcome to {}
+❤️ Welcome to {} ♥️
 
-You can use me to generate pyrogram and telethon string session. Use the below buttons to know more!
+You can use me to generate pyrogram and telethon string session. Use the 👇 Below buttons to know more!
     """
 
     # Home Button
     home_buttons = [
         [
             InlineKeyboardButton(
-                "♥️ Start Generating Session ♥️⚜", callback_data="generate"
+                "♥️ Start Generating Session ♥️", callback_data="generate"
             )
         ],
         [InlineKeyboardButton(text="🔙 Back ", callback_data="home")],
     ]
 
     generate_button = [
-        [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")]
+        [InlineKeyboardButton("⚡ Start Generating Session ⚡", callback_data="generate")]
     ]
 
     support_button = [
-        [InlineKeyboardButton("⚜ Support ⚜", url="https://t.me/LegendBot_XD")]
+        [InlineKeyboardButton("⚜ Support ⚜", url="https://t.me/TeamLegendXD")]
     ]
 
     # Rest Buttons
     buttons = [
         [
             InlineKeyboardButton(
-                "🔥 Start Generating Session 🔥", callback_data="generate"
+                "⚡ Start Generating Session ⚡", callback_data="generate"
             )
         ],
         [
             InlineKeyboardButton(
-                "👨‍💻 Repo 👨‍💻", url="https://github.com/LEGEND-AI/STRING-GENERATE"
+                "📝 Repo ", url="https://github.com/LEGEND-AI/STRING-GENERATE"
             )
         ],
         [
-            InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton(" About", callback_data="about"),
+            InlineKeyboardButton("How to Use Me❔", callback_data="help"),
+            InlineKeyboardButton("🤔 About", callback_data="about"),
         ],
-        [InlineKeyboardButton("🇮🇳 Owner 🇮🇳", url="https://t.me/LegendBot_Owner")],
+        [InlineKeyboardButton("Owner 🇮🇳", url="https://t.me/LegendBot_Owner")],
     ]
 
     # Help Message
@@ -65,5 +65,5 @@ This is a telegram bot Help You To Generate Pyrogram V1/V2 and Telethon String S
 [Telethon](docs.telethon.org)
 
 Language : [Python](www.python.org)
-            **Regarding ~ **@LegendUserBot_XD
+            **Regarding ~ **@TeamLegendXD
 """
