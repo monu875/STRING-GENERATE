@@ -9,7 +9,7 @@ from pyrogram.types import (
 @Client.on_callback_query()
 async def _callbacks(bot: Client, callback_query: CallbackQuery):
     user = await bot.get_me()
-    mention = user["mention"]
+    mention = user.mention
     query = callback_query.data.lower()
     if query.startswith("home"):
         if query == "home":
