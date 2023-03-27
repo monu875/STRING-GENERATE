@@ -28,11 +28,11 @@ ERROR_MESSAGE = "{}\n\nSomething Error in Session Generator Bot\nReport it To @L
 
 gen_buttons = [
     [
-        InlineKeyboardButton("Pyrogram V1", callback_data="pyrogram1"),
-        InlineKeyboardButton("Pyrogram V2", callback_data="pyrogram"),
+        InlineKeyboardButton("⚜️ Pyrogram V1 ⚜️", callback_data="pyrogram1"),
+        InlineKeyboardButton("✨Pyrogram V2 ✨", callback_data="pyrogram"),
     ],
     [
-        InlineKeyboardButton("Telethon", callback_data="telethon"),
+        InlineKeyboardButton("❤️ Telethon ♥️", callback_data="telethon"),
     ],
 ]
 
@@ -54,11 +54,11 @@ async def generate_session(
         ty = "Pyrogram"
         if not old_pyro:
             ty += " ᴠ2"
-    await msg.reply(f"Starting {ty} Session Generation...")
+    await msg.reply(f"🛡 Starting {ty} String Session Generation 🛡")
     user_id = msg.chat.id
     api_id_msg = await bot.ask(
         user_id,
-        "Please send your `API_ID`\n\nClick /skip for generate `APP_ID` & `API_HASH`.",
+        "Please send your `API_ID`\n\nClick /skip for leave `APP_ID` & `API_HASH`.",
         filters=filters.text,
     )
     if await cancelled(api_id_msg):
