@@ -29,7 +29,14 @@ if __name__ == "__main__":
     except AccessTokenInvalid:
         raise Exception("Your BOT_TOKEN is not valid.")
     uname = app.get_me().username
-    print(f"@{uname} Started Successfully!")
+    print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
+    print("🔰Support Group🔰 [LOGS] : @LegendBot_OP")
+    print("⚜️Update Group⚜️  [LOGS] : @LegendBot_AI")
+    print(f"✨Bot Username [LOGS] :@{uname}!")
+    print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
     app.stop()
-    print("Bot stopped. Alvida!")
+    print("⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
+    print("Bot Stopped")
+    print("✨Bot Username✨ [LOGS] :@{uname}")
+    print("⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
