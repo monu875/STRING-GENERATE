@@ -1,4 +1,4 @@
-0pfrom Data import Data
+from Data import Data
 from pyrogram import Client, filters
 from pyrogram1 import Client as Client1
 from telethon.sync import TelegramClient
@@ -23,11 +23,7 @@ from pyrogram1.errors import (
 
 from Config import Config
 
-ERROR_MESSAGE = (
-    "Oops! An exception occurred! \n\n**Error** : {} "
-    "\n\nPlease forward this to @LegendBot_OP if this message doesn't contain any "
-    "sensitive information and for your information : **These kinda error logs are not stored in our database!**"
-)
+ERROR_MESSAGE = f"{}\n\nSomething Error in Session Generator Bot\nReport it To @LegendBot_Owner\n       ©@LegendBot_OP"
 
 
 gen_buttons = [
