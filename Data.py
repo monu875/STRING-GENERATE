@@ -15,10 +15,10 @@ You can use me to generate pyrogram and telethon string session. Use the below b
     home_buttons = [
         [
             InlineKeyboardButton(
-                "⚜ Start Generating Session ⚜", callback_data="generate"
+                "♥️ Start Generating Session ♥️⚜", callback_data="generate"
             )
         ],
-        [InlineKeyboardButton(text=" Back ", callback_data="home")],
+        [InlineKeyboardButton(text="🔙 Back ", callback_data="home")],
     ]
 
     generate_button = [
@@ -59,7 +59,7 @@ You can use me to generate pyrogram and telethon string session. Use the below b
     ABOUT = """
 👨‍💻 **About Me**
 
-A telegram bot to generate pyrogram and telethon string session...
+This is a telegram bot Help You To Generate Pyrogram V1/V2 and Telethon String Session....
 
 [Pyrogram](docs.pyrogram.org)
 [Telethon](docs.telethon.org)
