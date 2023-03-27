@@ -13,8 +13,12 @@ You can use me to generate pyrogram and telethon string session. Use the below b
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton("⚜ Start Generating Session ⚜", callback_data="generate")],
-        [InlineKeyboardButton(text=" Back ", callback_data="home")]
+        [
+            InlineKeyboardButton(
+                "⚜ Start Generating Session ⚜", callback_data="generate"
+            )
+        ],
+        [InlineKeyboardButton(text=" Back ", callback_data="home")],
     ]
 
     generate_button = [
@@ -27,11 +31,19 @@ You can use me to generate pyrogram and telethon string session. Use the below b
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")],
-        [InlineKeyboardButton("👨‍💻 Repo 👨‍💻", url="https://github.com/LEGEND-AI/STRING-GENERATE")],
+        [
+            InlineKeyboardButton(
+                "🔥 Start Generating Session 🔥", callback_data="generate"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "👨‍💻 Repo 👨‍💻", url="https://github.com/LEGEND-AI/STRING-GENERATE"
+            )
+        ],
         [
             InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton(" About", callback_data="about")
+            InlineKeyboardButton(" About", callback_data="about"),
         ],
         [InlineKeyboardButton("🇮🇳 Owner 🇮🇳", url="https://t.me/LegendBoy_XD")],
     ]
@@ -45,7 +57,7 @@ You can use me to generate pyrogram and telethon string session. Use the below b
 
     # About Message
     ABOUT = """
-👨‍💻 **About Me** 
+👨‍💻 **About Me**
 
 A telegram bot to generate pyrogram and telethon string session...
 

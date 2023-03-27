@@ -1,7 +1,9 @@
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 from Config import MUST_JOIN
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.errors import (
+    ChatAdminRequired, ChatWriteForbidden, UserNotParticipant)
+
 
 """
 @Client.on_message(~filters.edited & filters.incoming & filters.private, group=-1)
