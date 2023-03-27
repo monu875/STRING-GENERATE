@@ -1,4 +1,5 @@
 from Data import Data
+from Config import Config
 from pyrogram import Client, filters
 from pyrogram1 import Client as Client1
 from telethon.sync import TelegramClient
@@ -21,7 +22,6 @@ from pyrogram1.errors import (
     PasswordHashInvalid as PasswordHashInvalid1,
     SessionPasswordNeeded as SessionPasswordNeeded1)
 
-from Config import Config
 
 ERROR_MESSAGE = "{}\n\nSomething Error in Session Generator Bot\nReport it To @LegendBot_Owner\n       ©@LegendBot_OP"
 
