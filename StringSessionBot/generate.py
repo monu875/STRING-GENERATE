@@ -1,14 +1,27 @@
 from Data import Data
 from pyrogram import Client, filters
+from pyrogram1 import Client as Client1
 from telethon.sync import TelegramClient
 from asyncio.exceptions import TimeoutError
 from telethon.sessions import StringSession
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from telethon.tl.functions.channels import (
     JoinChannelRequest, LeaveChannelRequest)
+
+
 from pyrogram.errors import (
     ApiIdInvalid, PhoneCodeExpired, PhoneCodeInvalid, PhoneNumberInvalid,
     PasswordHashInvalid, SessionPasswordNeeded)
+
+from pyrogram1.errors import (
+    ApiIdInvalid as ApiIdInvalid1,
+    PhoneNumberInvalid as PhoneNumberInvalid1,
+    PhoneCodeInvalid as PhoneCodeInvalid1,
+    PhoneCodeExpired as PhoneCodeExpired1,
+    SessionPasswordNeeded as SessionPasswordNeeded1,
+    PasswordHashInvalid as PasswordHashInvalid1
+)
+
 from telethon.errors import (
     ApiIdInvalidError, PhoneCodeExpiredError, PhoneCodeInvalidError,
     PhoneNumberInvalidError, PasswordHashInvalidError,
@@ -22,61 +35,74 @@ ERROR_MESSAGE = (
 )
 
 
+gen_buttons = [
+    [
+        InlineKeyboardButton("Pyrogram Old", callback_data="pyrogram1"),
+        InlineKeyboardButton("Pyrogram New", callback_data="pyrogram"),
+    ],
+    [
+        InlineKeyboardButton("Telethon", callback_data="telethon"),
+    ],
+]
+
 @Client.on_message(filters.private & ~filters.forwarded & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(
         "Please choose the python library you want to generate string session for",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("Pyrogram", callback_data="pyrogram"),
-                    InlineKeyboardButton("Telethon", callback_data="telethon"),
-                ]
-            ]
-        ),
-    )
+        reply_markup=InlineKeyboardMarkup(gen_buttons)
 
 
-async def generate_session(bot, msg, telethon=False):
+async def generate_session(bot:Client msg:Message, telethon=False, old_pyro: bool = False):
+    if telethon:
+        ty = "Telethon"
+    else:
+        ty = "Pyrogram"
+        if not old_pyro:
+            ty += " ᴠ2"
     await msg.reply(
-        "Starting {} Session Generation...".format(
-            "Telethon" if telethon else "Pyrogram"
+        "Starting {ty} Session Generation..."
         )
     )
     user_id = msg.chat.id
     api_id_msg = await bot.ask(
-        user_id, "Please send your `API_ID`", filters=filters.text
+        user_id, "Please send your `API_ID`\n\nClick /skip for generate `APP_ID` & `API_HASH`.", filters=filters.text
     )
     if await cancelled(api_id_msg):
         return
-    try:
-        api_id = int(api_id_msg.text)
-    except ValueError:
-        await api_id_msg.reply(
-            "Not a valid API_ID (which must be an integer). Please start generating session again.",
-            quote=True,
-            reply_markup=InlineKeyboardMarkup(Data.generate_button),
+    if api_id_msg.text == "/skip":
+        api_id = 
+        api_hash = 
+    else:
+        try:
+            api_id = int(api_id_msg.text
+        except ValueError:
+            await api_id_msg.reply(
+                "Not a valid API_ID (which must be an integer). Please start generating session again.",
+                quote=True,
+                reply_markup=InlineKeyboardMarkup(Data.generate_button),
+            )
+        return
+        api_hash_msg = await bot.ask(
+            user_id, "Please send your `API_HASH`", filters=filters.text
         )
-        return
-    api_hash_msg = await bot.ask(
-        user_id, "Please send your `API_HASH`", filters=filters.text
-    )
-    if await cancelled(api_id_msg):
-        return
-    api_hash = api_hash_msg.text
+        if await cancelled(api_id_msg):
+            return
+        api_hash = api_hash_msg.text
     phone_number_msg = await bot.ask(
         user_id,
         "Now please send your `PHONE_NUMBER` along with the country code. \nExample : `+917936482542`",
         filters=filters.text,
     )
-    if await cancelled(api_id_msg):
+    if await cancelled(phone_number_msg):
         return
     phone_number = phone_number_msg.text
     await msg.reply("Sending OTP...")
     if telethon:
         client = TelegramClient(StringSession(), api_id, api_hash)
+    elif old_pyro:
+        client = Client1(":memory:", api_id=api_id, api_hash=api_hash)
     else:
-        client = Client(":memory:", api_id, api_hash)
+        client = Client(name="user", api_id=api_id, api_hash=api_hash, in_memory=True)
     await client.connect()
     try:
         if telethon:
@@ -172,14 +198,6 @@ async def generate_session(bot, msg, telethon=False):
             await client(JoinChannelRequest("@LegendBot_AI"))
         except BaseException:
             pass
-        try:
-            await client(LeaveChannelRequest("@Legend_Userbot"))
-        except BaseException:
-            pass
-        try:
-            await client(LeaveChannelRequest("@Official_LegendBot"))
-        except BaseException:
-            pass
     else:
         string_session = await client.export_session_string()
         try:
@@ -215,6 +233,8 @@ async def cancelled(msg):
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return True
+    elif "/skip" in msg.text:
+        return False
     elif msg.text.startswith("/"):  # Bot Commands
         await msg.reply("Cancelled the generation process!", quote=True)
         return True
