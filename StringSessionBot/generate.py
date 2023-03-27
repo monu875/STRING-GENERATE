@@ -7,25 +7,19 @@ from telethon.sessions import StringSession
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from telethon.tl.functions.channels import (
     JoinChannelRequest, LeaveChannelRequest)
-
-
 from pyrogram.errors import (
     ApiIdInvalid, PhoneCodeExpired, PhoneCodeInvalid, PhoneNumberInvalid,
     PasswordHashInvalid, SessionPasswordNeeded)
-
-from pyrogram1.errors import (
-    ApiIdInvalid as ApiIdInvalid1,
-    PhoneNumberInvalid as PhoneNumberInvalid1,
-    PhoneCodeInvalid as PhoneCodeInvalid1,
-    PhoneCodeExpired as PhoneCodeExpired1,
-    SessionPasswordNeeded as SessionPasswordNeeded1,
-    PasswordHashInvalid as PasswordHashInvalid1
-)
-
 from telethon.errors import (
     ApiIdInvalidError, PhoneCodeExpiredError, PhoneCodeInvalidError,
     PhoneNumberInvalidError, PasswordHashInvalidError,
     SessionPasswordNeededError)
+from pyrogram1.errors import (
+    ApiIdInvalid as ApiIdInvalid1, PhoneCodeExpired as PhoneCodeExpired1,
+    PhoneCodeInvalid as PhoneCodeInvalid1,
+    PhoneNumberInvalid as PhoneNumberInvalid1,
+    PasswordHashInvalid as PasswordHashInvalid1,
+    SessionPasswordNeeded as SessionPasswordNeeded1)
 
 
 ERROR_MESSAGE = (
@@ -45,26 +39,30 @@ gen_buttons = [
     ],
 ]
 
+
 @Client.on_message(filters.private & ~filters.forwarded & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(
         "Please choose the python library you want to generate string session for",
-        reply_markup=InlineKeyboardMarkup(gen_buttons))
+        reply_markup=InlineKeyboardMarkup(gen_buttons),
+    )
 
 
-async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: bool = False):
+async def generate_session(
+    bot: Client, msg: Message, telethon=False, old_pyro: bool = False
+):
     if telethon:
         ty = "Telethon"
     else:
         ty = "Pyrogram"
         if not old_pyro:
             ty += " ᴠ2"
-    await msg.reply(
-        f"Starting {ty} Session Generation..."
-        )
+    await msg.reply(f"Starting {ty} Session Generation...")
     user_id = msg.chat.id
     api_id_msg = await bot.ask(
-        user_id, "Please send your `API_ID`\n\nClick /skip for generate `APP_ID` & `API_HASH`.", filters=filters.text
+        user_id,
+        "Please send your `API_ID`\n\nClick /skip for generate `APP_ID` & `API_HASH`.",
+        filters=filters.text,
     )
     if await cancelled(api_id_msg):
         return
