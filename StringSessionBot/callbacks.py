@@ -47,8 +47,12 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("✨Pyrogram V1✨", callback_data="pyrogram1"),
-                        InlineKeyboardButton("⚜️Pyrogram V2⚜️", callback_data="pyrogram"),
+                        InlineKeyboardButton(
+                            "✨Pyrogram V1✨", callback_data="pyrogram1"
+                        ),
+                        InlineKeyboardButton(
+                            "⚜️Pyrogram V2⚜️", callback_data="pyrogram"
+                        ),
                     ],
                     [
                         InlineKeyboardButton("⚡Telethon⚡", callback_data="telethon"),
