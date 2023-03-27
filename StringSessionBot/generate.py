@@ -73,7 +73,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
         api_hash = Config.API_HASH
     else:
         try:
-            api_id = int(api_id_msg.text
+            api_id = int(api_id_msg.text)
         except ValueError:
             await api_id_msg.reply(
                 "Not a valid API_ID (which must be an integer). Please start generating session again.",
