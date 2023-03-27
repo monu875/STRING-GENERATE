@@ -49,7 +49,7 @@ gen_buttons = [
 async def main(_, msg):
     await msg.reply(
         "Please choose the python library you want to generate string session for",
-        reply_markup=InlineKeyboardMarkup(gen_buttons)
+        reply_markup=InlineKeyboardMarkup(gen_buttons))
 
 
 async def generate_session(bot:Client msg:Message, telethon=False, old_pyro: bool = False):
