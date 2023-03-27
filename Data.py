@@ -45,13 +45,13 @@ You can use me to generate pyrogram and telethon string session. Use the below b
             InlineKeyboardButton("How to Use ❔", callback_data="help"),
             InlineKeyboardButton(" About", callback_data="about"),
         ],
-        [InlineKeyboardButton("🇮🇳 Owner 🇮🇳", url="https://t.me/LegendBoy_XD")],
+        [InlineKeyboardButton("🇮🇳 Owner 🇮🇳", url="https://t.me/LegendBot_Owner")],
     ]
 
     # Help Message
     HELP = """
 » Click the below button or use /generate command to start generating session!
-» Click the required button; [Pyrogram/Telethon]
+» Click the required button; [Pyrogram v1/Pyrogram v2/Telethon]
 » Enter the required variables when asked.
 """
 
@@ -65,5 +65,5 @@ A telegram bot to generate pyrogram and telethon string session...
 [Telethon](docs.telethon.org)
 
 Language : [Python](www.python.org)
-            **Regarding ~ **@LegendBot_XD
+            **Regarding ~ **@LegendUserBot_XD
 """
