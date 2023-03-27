@@ -1,4 +1,4 @@
-from Data import Data
+0pfrom Data import Data
 from pyrogram import Client, filters
 from pyrogram1 import Client as Client1
 from telethon.sync import TelegramClient
@@ -21,6 +21,7 @@ from pyrogram1.errors import (
     PasswordHashInvalid as PasswordHashInvalid1,
     SessionPasswordNeeded as SessionPasswordNeeded1)
 
+from Config import Config
 
 ERROR_MESSAGE = (
     "Oops! An exception occurred! \n\n**Error** : {} "
@@ -31,8 +32,8 @@ ERROR_MESSAGE = (
 
 gen_buttons = [
     [
-        InlineKeyboardButton("Pyrogram Old", callback_data="pyrogram1"),
-        InlineKeyboardButton("Pyrogram New", callback_data="pyrogram"),
+        InlineKeyboardButton("Pyrogram V1", callback_data="pyrogram1"),
+        InlineKeyboardButton("Pyrogram V2", callback_data="pyrogram"),
     ],
     [
         InlineKeyboardButton("Telethon", callback_data="telethon"),
