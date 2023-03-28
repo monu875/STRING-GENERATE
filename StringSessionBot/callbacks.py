@@ -1,7 +1,7 @@
 from Data import Data
 from pyrogram import Client
 from StringSessionBot.generate import ERROR_MESSAGE, generate_session
-from pyrogram.types import (
+from pyrogram1.types import (
     CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup)
 
 
