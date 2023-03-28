@@ -64,7 +64,7 @@ async def generate_session(
     if await cancelled(api_id_msg):
         return
     if api_id_msg.text == "/skip":
-        api_id = Config.APP_ID
+        api_id = Config.API_ID
         api_hash = Config.API_HASH
     else:
         try:
@@ -75,7 +75,7 @@ async def generate_session(
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
-        return
+            return
         api_hash_msg = await bot.ask(
             user_id, "Please send your `API_HASH`", filters=filters.text
         )
