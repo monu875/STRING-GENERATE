@@ -23,7 +23,6 @@ from pyrogram1.errors import (
     SessionPasswordNeeded as SessionPasswordNeeded1)
 
 
-
 gen_buttons = [
     [
         InlineKeyboardButton("⚜️ Pyrogram V1 ⚜️", callback_data="pyrogram1"),
