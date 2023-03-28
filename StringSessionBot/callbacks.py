@@ -18,12 +18,12 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             await bot.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
-                text="Hello",
+                text="Data.START.format(callback_query.from_user.mention, mention),
                 reply_markup=InlineKeyboardMarkup(Data.buttons),
             )
     elif query == "about":
         chat_id = callback_query.from_user.id
-        message_id = callback_query.id
+        message_id = callback_query.message.id
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
@@ -33,7 +33,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         )
     elif query == "help":
         chat_id = callback_query.from_user.id
-        message_id = callback_query.id
+        message_id = callback_query.message.id
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
