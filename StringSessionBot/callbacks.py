@@ -1,4 +1,4 @@
-from Data import Data
+from LegendSS.Data import Data
 from pyrogram import Client
 from StringSessionBot.generate import ERROR_MESSAGE, generate_session
 from pyrogram1.types import (
