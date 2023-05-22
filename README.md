@@ -1,10 +1,13 @@
-[![STRING-BOT](https://graph.org/file/c9ac4314d26c77711986d.jpg)](https://t.me/LegendSessionBot)
+[![STRING-BOT](
+https://graph.org/file/c64df54687a3dcc00ab25.jpg)](https://t.me/LegendSessionBot)
 
 <h1 align="center">
-<b> 『𖤍 Session ࿐』➙「〄」 <\b>
+<b> 『𖤍 Session ࿐』➙「🇮🇳」 </b>
 </h1>
 
-- This Bot Can Help U To Generate String Session Pyrogram and Telethon 
+<h6 align="center">
+<b> This is One Of The Best Bot Which Can Help U To Generate String Session For Pyrogram and Telethon </b>
+</h6>
 
 - ⚠️ Note : Dont Try To Missuse This Bot.
 
