@@ -14,7 +14,7 @@ https://graph.org/file/c64df54687a3dcc00ab25.jpg)](https://t.me/LegendSessionBot
 [![Forks](https://img.shields.io/github/forks/LEGEND-AI/STRING-GENERATE?style=flat-square&color=orange)](https://github.com/LEGEND-AI/STRING-GENERATE/fork)
 [![Size](https://img.shields.io/github/repo-size/LEGEND-AI/STRING-GENERATE?style=flat-square&color=green)](https://github.com/LEGEND-AI/STRING-GENERATE)   
 [![Python](https://img.shields.io/badge/Python-v3.10.5-blue)](https://www.python.org/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/LEGEND-AI/LEGENDBOT/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/LEGEND-AI/STRING-GENEgraphs/commit-activity)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/LEGEND-AI/LEGENDBOT)
 [![Contributors](https://img.shields.io/github/contributors/LEGEND-AI/LEGENDBOT?style=flat-square&color=green)](https://github.com/LEGEND-AI/LEGENDBOT/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
