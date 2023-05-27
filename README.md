@@ -31,8 +31,8 @@ https://graph.org/file/c64df54687a3dcc00ab25.jpg)](https://t.me/LegendSessionBot
 - [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-brightgreen)](https://t.me/LegendBot_AI)
   
 ## YouTube 📺
-- [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCvp8PY25PTRhFDZjLv3sVfg?style=social)](https://youtube.com/channel/UCvp8PY25PTRhFDZjLv3sVfg)
 
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCgv4QgLLpyHVWtBiTpr5srg?label=TeamLegend&style=social)](https://youtube.com/@TeamLegendBot)
 
 ## 📄 <a name=" Required Variable"></a>Variable
 
