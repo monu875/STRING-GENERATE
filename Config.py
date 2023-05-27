@@ -1,19 +1,13 @@
 import os
 
+from dotenv import load_dotenv
 
-ENVIRONMENT = os.environ.get("ENVIRONMENT", False)
+if os.path.exists(".env"):
+    load_dotenv(".env")
 
-if ENVIRONMENT:
-    try:
-        API_ID = int(os.environ.get("API_ID", 0))
-    except ValueError:
-        raise Exception(
-            "Your API_ID is not a valid integer.\nPlease Check The APP_ID Correctly"
-        )
-    API_HASH = os.environ.get("API_HASH", None)
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-else:
-    # Fill the Values
-    API_ID = 0
-    API_HASH = ""
-    BOT_TOKEN = ""
+ENV = bool(os.environ.get("ENV", False))
+
+if ENV or os.path.exists(".env"):
+    from sample_config import *  # noqa
+elif os.path.exists("config.py"):
+    from config import *
