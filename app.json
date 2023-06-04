@@ -26,12 +26,12 @@
     },
     "API_ID": {
       "description": "Get this value from my.telegram.org.",
-      "required": False,
+      "required": false,
       "value": ""
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org.",
-      "required": False,
+      "required": false,
       "value": ""
     },
     "BOT_TOKEN": {
