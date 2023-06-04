@@ -132,9 +132,9 @@ python3 start.py
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Koyeb+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
-## 📄 <a name=" Commands "></a>Commands
+## 📄 <a name=" Features "></a>Features
 
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=All+•+Cmds+•&style=social)](https://youtu.be/CH_KO1wim2o)
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=All+Features+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
 ## Bugs
@@ -144,11 +144,8 @@ python3 start.py
 ## Disclaimer
   
 >                     ❗YOU ARE FOREWARNED❗
-> We won't be responsible for any kind of ban due to this bot.
 
-> Bot Spam was made for fun purpose and to make group management easier.
-
-> It's your concern if you spam and gets your account banned.
+> String Generator Bot was made for Generate Telethon/Python Session
 
 > Also, Forks won't be entertained.
 
