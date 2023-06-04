@@ -39,5 +39,5 @@ if __name__ == "__main__":
     app.stop()
     print("⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
     print("Bot Stopped")
-    print("✨Bot Username✨ [LOGS] :@{uname}")
+    print(f"✨Bot Username✨ [LOGS] :@{uname}")
     print("⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
