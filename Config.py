@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv
+import load_dotenv
 
 
 if os.path.exists(".env"):
